@@ -115,6 +115,12 @@
     <Compile Include="AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EquipmentInventoryForm.Designer.vb">
+      <DependentUpon>EquipmentInventoryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentInventoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExistingServiceCallForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     <Compile Include="ServiceCallHistory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="EquipmentInventoryForm.resx">
+      <DependentUpon>EquipmentInventoryForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExistingServiceCallForm.resx">
       <DependentUpon>ExistingServiceCallForm.vb</DependentUpon>
     </EmbeddedResource>

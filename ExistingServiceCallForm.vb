@@ -400,15 +400,13 @@ Public Class ExistingServiceCallForm
 
         command.Dispose()
         connection.Close()
-
+        connection.Dispose()
 
         ServiceCallDropDown.DataSource = FormDataSet.Tables(0)
         ServiceCallDropDown.ValueMember = "ServiceCallID"
         ServiceCallDropDown.DisplayMember = "ServiceCallID"
 
         Dim selectedServiceCallID As String = CType(ServiceCallDropDown.SelectedItem, DataRowView).Row.Item("ServiceCallID").ToString
-        selectServiceCallsQuery = selectServiceCallsQuery & " where tsc.servicecallid = " & Int32.Parse(selectedServiceCallID)
-
         UpdateForm(selectedServiceCallID)
 
     End Sub
@@ -476,6 +474,7 @@ Public Class ExistingServiceCallForm
 
         updateServiceCallQuery = "update tblServiceCalls
                                             set Details = '" & updatedDetails & "' where ServiceCallID = " & selectedServiceCallId
+        connection = New SqlConnection(connetionString)
         command = New SqlCommand(updateServiceCallQuery, connection)
         connection.Open()
         command.ExecuteNonQuery()
