@@ -37,6 +37,7 @@ Partial Class ServiceCallHistory
         Me.ExistingCallsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ExistingCallsGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.ExistingCallsGridView.Location = New System.Drawing.Point(12, 94)
+        Me.ExistingCallsGridView.MultiSelect = False
         Me.ExistingCallsGridView.Name = "ExistingCallsGridView"
         Me.ExistingCallsGridView.ReadOnly = True
         Me.ExistingCallsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect

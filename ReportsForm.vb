@@ -112,7 +112,7 @@ Public Class ReportsForm
 #End Region
 
     Private Sub EquipmentInventoryButton_Click(sender As Object, e As EventArgs) Handles EquipmentInventoryButton.Click
-
+        EquipmentInventoryForm.ShowDialog()
     End Sub
 
     Private Sub ServiceCallHistoryButton_Click(sender As Object, e As EventArgs) Handles ServiceCallHistoryButton.Click

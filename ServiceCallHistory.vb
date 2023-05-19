@@ -28,7 +28,7 @@ Public Class ServiceCallHistory
 
         command.Dispose()
         connection.Close()
-
+        connection.Dispose()
     End Sub
 
     Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
