@@ -30,17 +30,17 @@ Public Class ReportsForm
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents btnNewCall As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents btnCancel As System.Windows.Forms.Button
+    Friend WithEvents MachineReliabilityButton As System.Windows.Forms.Button
+    Friend WithEvents ServiceCallHistoryButton As System.Windows.Forms.Button
+    Friend WithEvents EquipmentInventoryButton As System.Windows.Forms.Button
+    Friend WithEvents CancelButton As System.Windows.Forms.Button
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReportsForm))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnNewCall = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.MachineReliabilityButton = New System.Windows.Forms.Button()
+        Me.ServiceCallHistoryButton = New System.Windows.Forms.Button()
+        Me.EquipmentInventoryButton = New System.Windows.Forms.Button()
+        Me.CancelButton = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,50 +55,50 @@ Public Class ReportsForm
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-        'btnNewCall
+        'MachineReliabilityButton
         '
-        Me.btnNewCall.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnNewCall.Location = New System.Drawing.Point(15, 64)
-        Me.btnNewCall.Name = "btnNewCall"
-        Me.btnNewCall.Size = New System.Drawing.Size(120, 96)
-        Me.btnNewCall.TabIndex = 7
-        Me.btnNewCall.Text = "Machine Reliability Rate"
+        Me.MachineReliabilityButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.MachineReliabilityButton.Location = New System.Drawing.Point(15, 64)
+        Me.MachineReliabilityButton.Name = "MachineReliabilityButton"
+        Me.MachineReliabilityButton.Size = New System.Drawing.Size(120, 96)
+        Me.MachineReliabilityButton.TabIndex = 7
+        Me.MachineReliabilityButton.Text = "Machine Reliability Rate"
         '
-        'Button1
+        'ServiceCallHistoryButton
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(151, 64)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 96)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Service Call History"
+        Me.ServiceCallHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ServiceCallHistoryButton.Location = New System.Drawing.Point(151, 64)
+        Me.ServiceCallHistoryButton.Name = "ServiceCallHistoryButton"
+        Me.ServiceCallHistoryButton.Size = New System.Drawing.Size(120, 96)
+        Me.ServiceCallHistoryButton.TabIndex = 8
+        Me.ServiceCallHistoryButton.Text = "Service Call History"
         '
-        'Button2
+        'EquipmentInventoryButton
         '
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Location = New System.Drawing.Point(287, 64)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(120, 96)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Inventory"
+        Me.EquipmentInventoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.EquipmentInventoryButton.Location = New System.Drawing.Point(287, 64)
+        Me.EquipmentInventoryButton.Name = "EquipmentInventoryButton"
+        Me.EquipmentInventoryButton.Size = New System.Drawing.Size(120, 96)
+        Me.EquipmentInventoryButton.TabIndex = 9
+        Me.EquipmentInventoryButton.Text = "Equipment Inventory"
         '
-        'btnCancel
+        'CancelButton
         '
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCancel.Location = New System.Drawing.Point(48, 200)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(312, 24)
-        Me.btnCancel.TabIndex = 11
-        Me.btnCancel.Text = "CA&NCEL"
+        Me.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.CancelButton.Location = New System.Drawing.Point(48, 200)
+        Me.CancelButton.Name = "CancelButton"
+        Me.CancelButton.Size = New System.Drawing.Size(312, 24)
+        Me.CancelButton.TabIndex = 11
+        Me.CancelButton.Text = "CA&NCEL"
         '
         'ReportsForm
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.ClientSize = New System.Drawing.Size(418, 245)
-        Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnNewCall)
+        Me.Controls.Add(Me.CancelButton)
+        Me.Controls.Add(Me.EquipmentInventoryButton)
+        Me.Controls.Add(Me.ServiceCallHistoryButton)
+        Me.Controls.Add(Me.MachineReliabilityButton)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "ReportsForm"
@@ -111,18 +111,15 @@ Public Class ReportsForm
 
 #End Region
 
-    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-        End
+    Private Sub EquipmentInventoryButton_Click(sender As Object, e As EventArgs) Handles EquipmentInventoryButton.Click
 
     End Sub
 
-    Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
+    Private Sub ServiceCallHistoryButton_Click(sender As Object, e As EventArgs) Handles ServiceCallHistoryButton.Click
+        ServiceCallHistory.ShowDialog()
+    End Sub
+
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
         Me.Hide()
-    End Sub
-
-    Private Sub btnNewCall_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNewCall.Click
-        MsgBox("The Canon iR600-M105 has a reliability rate of " & 100 - 30 & "% since its last service call.")
-
     End Sub
 End Class
