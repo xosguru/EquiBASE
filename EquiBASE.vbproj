@@ -138,6 +138,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ServiceCallHistory.Designer.vb">
+      <DependentUpon>ServiceCallHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCallHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="ExistingServiceCallForm.resx">
       <DependentUpon>ExistingServiceCallForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceCallHistory.resx">
+      <DependentUpon>ServiceCallHistory.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="My Project\Settings.settings">
