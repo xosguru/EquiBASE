@@ -6,7 +6,7 @@ Public Class EquipmentInventoryForm
     Dim adapter As SqlDataAdapter
     Dim command As SqlCommand
     Dim FormDataSet As DataSet
-    Dim connetionString As String = "data source=DEVSQL;initial catalog=EquiBASE;integrated security=SSPI;persist security info=False;packet size=4096"
+    Dim connectionString As String = "data source=DEVSQL;initial catalog=EquiBASE;integrated security=SSPI;persist security info=False;packet size=4096"
     Dim getServiceCallsQuery As String = "Select tm.MachineID,tmf.ManufacturerName,tm.MachineName,tm.MachineNumber,tm.SerialNumber,
                                             (select top 1 ClickCount from tblServiceCalls tsc where tsc.MachineID = tm.MachineID) as ClickCount,
                                             tm.InServiceDate,tm.Status from tblMachines tm
@@ -14,7 +14,7 @@ Public Class EquipmentInventoryForm
                                             tmf.ManufacturerID = tm.ManufacturerID"
     Private Sub EquipmentInventoryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormDataSet = New DataSet()
-        connection = New SqlConnection(connetionString)
+        connection = New SqlConnection(connectionString)
         command = New SqlCommand(getServiceCallsQuery, connection)
         adapter = New SqlDataAdapter(command)
         adapter.Fill(FormDataSet)

@@ -85,7 +85,7 @@ Public Class NewServiceCallForm
         '
         Me.MachinesDropDown.BackColor = System.Drawing.SystemColors.ControlLight
         Me.MachinesDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.MachinesDropDown.Location = New System.Drawing.Point(11, 98)
+        Me.MachinesDropDown.Location = New System.Drawing.Point(10, 98)
         Me.MachinesDropDown.Name = "MachinesDropDown"
         Me.MachinesDropDown.Size = New System.Drawing.Size(235, 24)
         Me.MachinesDropDown.TabIndex = 1
@@ -93,9 +93,9 @@ Public Class NewServiceCallForm
         'SelectMachineLabel
         '
         Me.SelectMachineLabel.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SelectMachineLabel.Location = New System.Drawing.Point(11, 78)
+        Me.SelectMachineLabel.Location = New System.Drawing.Point(10, 78)
         Me.SelectMachineLabel.Name = "SelectMachineLabel"
-        Me.SelectMachineLabel.Size = New System.Drawing.Size(224, 21)
+        Me.SelectMachineLabel.Size = New System.Drawing.Size(235, 20)
         Me.SelectMachineLabel.TabIndex = 20
         Me.SelectMachineLabel.Text = "Select a Machine"
         Me.SelectMachineLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -104,9 +104,9 @@ Public Class NewServiceCallForm
         '
         Me.LogoBox.Enabled = False
         Me.LogoBox.Image = CType(resources.GetObject("LogoBox.Image"), System.Drawing.Image)
-        Me.LogoBox.Location = New System.Drawing.Point(11, 20)
+        Me.LogoBox.Location = New System.Drawing.Point(10, 20)
         Me.LogoBox.Name = "LogoBox"
-        Me.LogoBox.Size = New System.Drawing.Size(155, 39)
+        Me.LogoBox.Size = New System.Drawing.Size(155, 40)
         Me.LogoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.LogoBox.TabIndex = 6
         Me.LogoBox.TabStop = False
@@ -114,9 +114,9 @@ Public Class NewServiceCallForm
         'SerialNumberLabel
         '
         Me.SerialNumberLabel.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SerialNumberLabel.Location = New System.Drawing.Point(11, 149)
+        Me.SerialNumberLabel.Location = New System.Drawing.Point(10, 149)
         Me.SerialNumberLabel.Name = "SerialNumberLabel"
-        Me.SerialNumberLabel.Size = New System.Drawing.Size(235, 19)
+        Me.SerialNumberLabel.Size = New System.Drawing.Size(235, 20)
         Me.SerialNumberLabel.TabIndex = 11
         Me.SerialNumberLabel.Text = "Serial Number"
         Me.SerialNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -128,7 +128,7 @@ Public Class NewServiceCallForm
         Me.SaveButton.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SaveButton.Location = New System.Drawing.Point(858, 394)
         Me.SaveButton.Name = "SaveButton"
-        Me.SaveButton.Size = New System.Drawing.Size(105, 69)
+        Me.SaveButton.Size = New System.Drawing.Size(105, 70)
         Me.SaveButton.TabIndex = 13
         Me.SaveButton.Text = "&Save"
         Me.SaveButton.UseVisualStyleBackColor = False
@@ -139,7 +139,7 @@ Public Class NewServiceCallForm
         Me.CancelButton.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CancelButton.Location = New System.Drawing.Point(728, 394)
         Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(105, 69)
+        Me.CancelButton.Size = New System.Drawing.Size(105, 70)
         Me.CancelButton.TabIndex = 14
         Me.CancelButton.Text = "Ca&ncel"
         '
@@ -215,7 +215,7 @@ Public Class NewServiceCallForm
         Me.CallNotesTextBox.BackColor = System.Drawing.SystemColors.ControlLight
         Me.CallNotesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CallNotesTextBox.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CallNotesTextBox.Location = New System.Drawing.Point(14, 268)
+        Me.CallNotesTextBox.Location = New System.Drawing.Point(10, 268)
         Me.CallNotesTextBox.MaxLength = 300
         Me.CallNotesTextBox.Multiline = True
         Me.CallNotesTextBox.Name = "CallNotesTextBox"
@@ -225,7 +225,7 @@ Public Class NewServiceCallForm
         '
         'ProblemDetailsLabel
         '
-        Me.ProblemDetailsLabel.Location = New System.Drawing.Point(12, 245)
+        Me.ProblemDetailsLabel.Location = New System.Drawing.Point(10, 245)
         Me.ProblemDetailsLabel.Name = "ProblemDetailsLabel"
         Me.ProblemDetailsLabel.Size = New System.Drawing.Size(227, 21)
         Me.ProblemDetailsLabel.TabIndex = 17
@@ -236,7 +236,7 @@ Public Class NewServiceCallForm
         '
         Me.EmployeeNameLabel.Location = New System.Drawing.Point(286, 78)
         Me.EmployeeNameLabel.Name = "EmployeeNameLabel"
-        Me.EmployeeNameLabel.Size = New System.Drawing.Size(224, 20)
+        Me.EmployeeNameLabel.Size = New System.Drawing.Size(235, 20)
         Me.EmployeeNameLabel.TabIndex = 18
         Me.EmployeeNameLabel.Text = "Employee Name"
         Me.EmployeeNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -255,7 +255,7 @@ Public Class NewServiceCallForm
         '
         Me.CurrentClickCountLabel.Location = New System.Drawing.Point(286, 146)
         Me.CurrentClickCountLabel.Name = "CurrentClickCountLabel"
-        Me.CurrentClickCountLabel.Size = New System.Drawing.Size(224, 20)
+        Me.CurrentClickCountLabel.Size = New System.Drawing.Size(235, 20)
         Me.CurrentClickCountLabel.TabIndex = 20
         Me.CurrentClickCountLabel.Text = "Current Click Count"
         Me.CurrentClickCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -273,7 +273,7 @@ Public Class NewServiceCallForm
         Me.SerialNumberTextLabel.AccessibleDescription = "Displays the serial number for the selected machine."
         Me.SerialNumberTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.SerialNumberTextLabel.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SerialNumberTextLabel.Location = New System.Drawing.Point(11, 168)
+        Me.SerialNumberTextLabel.Location = New System.Drawing.Point(10, 168)
         Me.SerialNumberTextLabel.Name = "SerialNumberTextLabel"
         Me.SerialNumberTextLabel.Size = New System.Drawing.Size(235, 20)
         Me.SerialNumberTextLabel.TabIndex = 21
@@ -306,7 +306,7 @@ Public Class NewServiceCallForm
         Me.Controls.Add(Me.SelectMachineLabel)
         Me.Controls.Add(Me.MachinesDropDown)
         Me.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "NewServiceCallForm"
@@ -324,7 +324,7 @@ Public Class NewServiceCallForm
 #End Region
 
     Public NewServiceCallDataSet As DataSet
-    Dim connetionString As String = "data source=DEVSQL;initial catalog=EquiBASE;integrated security=SSPI;persist security info=False;packet size=4096"
+    Dim connectionString As String = "data source=DEVSQL;initial catalog=EquiBASE;integrated security=SSPI;persist security info=False;packet size=4096"
 
 
     Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveButton.Click
@@ -393,7 +393,7 @@ Public Class NewServiceCallForm
 
         Dim updateMachineClickCountSql As String = "update tblMachines set ClickCount = " & clickCount & "Where MachineID = " & machineID & " And ClickCount < " & clickCount
 
-        connection = New SqlConnection(connetionString)
+        connection = New SqlConnection(connectionString)
 
         Try
             connection.Open()
@@ -449,7 +449,7 @@ Public Class NewServiceCallForm
         SelectMachinesSql = "select * from tblManufacturers tman inner join tblMachines tmach on tman.ManufacturerID = tmach.ManufacturerID"
         SelectEmployeesSql = "select *, FirstName + ' ' + LastName as EmployeeName from tblEmployees"
         SelectServiceCallsSql = "select * from tblServiceCalls tmc inner join tblMachines tm on tmc.MachineID = tm.MachineID order by ServiceCallDate desc"
-        connection = New SqlConnection(connetionString)
+        connection = New SqlConnection(connectionString)
 
         Try
             connection.Open()
