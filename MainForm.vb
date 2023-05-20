@@ -9,7 +9,7 @@ Public Class MainForm
     'a new instance of the form is created.
 
     Public Shared frmNewCall As New NewServiceCallForm()
-    Public Shared frmMachMaint As New MachineMaintenanceForm()
+    Public Shared frmMachMaint As New EditEquipmentForm()
     Public Shared frmExCall As New ExistingServiceCallForm()
     Public Shared frmReports As New ReportsForm()
 
@@ -65,9 +65,9 @@ Public Class MainForm
         '
         Me.NewServiceCallButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.NewServiceCallButton.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.NewServiceCallButton.Location = New System.Drawing.Point(18, 23)
+        Me.NewServiceCallButton.Location = New System.Drawing.Point(33, 23)
         Me.NewServiceCallButton.Name = "NewServiceCallButton"
-        Me.NewServiceCallButton.Size = New System.Drawing.Size(168, 118)
+        Me.NewServiceCallButton.Size = New System.Drawing.Size(165, 115)
         Me.NewServiceCallButton.TabIndex = 1
         Me.NewServiceCallButton.Text = "New Service Call"
         '
@@ -75,27 +75,29 @@ Public Class MainForm
         '
         Me.ExistingServiceCallButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ExistingServiceCallButton.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ExistingServiceCallButton.Location = New System.Drawing.Point(242, 23)
+        Me.ExistingServiceCallButton.Location = New System.Drawing.Point(260, 23)
         Me.ExistingServiceCallButton.Name = "ExistingServiceCallButton"
-        Me.ExistingServiceCallButton.Size = New System.Drawing.Size(168, 118)
+        Me.ExistingServiceCallButton.Size = New System.Drawing.Size(165, 115)
         Me.ExistingServiceCallButton.TabIndex = 2
         Me.ExistingServiceCallButton.Text = "Existing Service Call"
         '
         'MachineMaintenanceButton
         '
         Me.MachineMaintenanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.MachineMaintenanceButton.Location = New System.Drawing.Point(18, 147)
+        Me.MachineMaintenanceButton.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.MachineMaintenanceButton.Location = New System.Drawing.Point(33, 154)
         Me.MachineMaintenanceButton.Name = "MachineMaintenanceButton"
-        Me.MachineMaintenanceButton.Size = New System.Drawing.Size(168, 119)
+        Me.MachineMaintenanceButton.Size = New System.Drawing.Size(165, 115)
         Me.MachineMaintenanceButton.TabIndex = 3
-        Me.MachineMaintenanceButton.Text = "Machine Maintenance"
+        Me.MachineMaintenanceButton.Text = "Manage Equipment"
         '
         'ReportsButton
         '
         Me.ReportsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ReportsButton.Location = New System.Drawing.Point(242, 147)
+        Me.ReportsButton.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.ReportsButton.Location = New System.Drawing.Point(260, 154)
         Me.ReportsButton.Name = "ReportsButton"
-        Me.ReportsButton.Size = New System.Drawing.Size(168, 119)
+        Me.ReportsButton.Size = New System.Drawing.Size(165, 115)
         Me.ReportsButton.TabIndex = 4
         Me.ReportsButton.Text = "Reports"
         '
@@ -107,9 +109,9 @@ Public Class MainForm
         Me.Panel1.Controls.Add(Me.MachineMaintenanceButton)
         Me.Panel1.Controls.Add(Me.ReportsButton)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Panel1.Location = New System.Drawing.Point(22, 69)
+        Me.Panel1.Location = New System.Drawing.Point(10, 69)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(437, 295)
+        Me.Panel1.Size = New System.Drawing.Size(465, 295)
         Me.Panel1.TabIndex = 0
         Me.Panel1.TabStop = True
         '
@@ -117,9 +119,9 @@ Public Class MainForm
         '
         Me.PictureBox1.Enabled = False
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(22, 16)
+        Me.PictureBox1.Location = New System.Drawing.Point(10, 20)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(153, 39)
+        Me.PictureBox1.Size = New System.Drawing.Size(155, 40)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
@@ -127,20 +129,20 @@ Public Class MainForm
         'ExitButton
         '
         Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ExitButton.Location = New System.Drawing.Point(22, 384)
+        Me.ExitButton.Location = New System.Drawing.Point(10, 384)
         Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(437, 30)
+        Me.ExitButton.Size = New System.Drawing.Size(465, 30)
         Me.ExitButton.TabIndex = 5
-        Me.ExitButton.Text = "E&XIT SYSTEM"
+        Me.ExitButton.Text = "E&xit System"
         '
         'MainForm
         '
-        Me.ClientSize = New System.Drawing.Size(490, 450)
+        Me.ClientSize = New System.Drawing.Size(484, 451)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "MainForm"

@@ -6,7 +6,7 @@ Public Class ServiceCallHistory
     Dim adapter As SqlDataAdapter
     Dim command As SqlCommand
     Dim FormDataSet As DataSet
-    Dim connetionString As String = "data source=DEVSQL;initial catalog=EquiBASE;integrated security=SSPI;persist security info=False;packet size=4096"
+    Dim connectionString As String = "data source=DEVSQL;initial catalog=EquiBASE;integrated security=SSPI;persist security info=False;packet size=4096"
     Dim getServiceCallsQuery As String = "select ServiceCallID, ServiceCallDate, tm.MachineName, tm.MachineNumber, ErrorCode, Details,
                                             AfterHours, QuickDiagnostics, tsc.ClickCount, te.FirstName + ' ' + te.LastName as EmployeeName from tblServiceCalls tsc
                                             inner join tblMachines tm on
@@ -18,7 +18,7 @@ Public Class ServiceCallHistory
     Private Sub ServiceCallHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         FormDataSet = New DataSet()
-        connection = New SqlConnection(connetionString)
+        connection = New SqlConnection(connectionString)
         command = New SqlCommand(getServiceCallsQuery, connection)
         adapter = New SqlDataAdapter(command)
         adapter.Fill(FormDataSet)

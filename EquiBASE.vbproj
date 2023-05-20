@@ -124,7 +124,19 @@
     <Compile Include="ExistingServiceCallForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MachineMaintenanceForm.vb">
+    <Compile Include="EditEquipmentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewEquipmentForm.Designer.vb">
+      <DependentUpon>NewEquipmentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewEquipmentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewManufacturerForm.Designer.vb">
+      <DependentUpon>NewManufacturerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewManufacturerForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewServiceCallForm.vb">
@@ -156,8 +168,14 @@
     <EmbeddedResource Include="ExistingServiceCallForm.resx">
       <DependentUpon>ExistingServiceCallForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MachineMaintenanceForm.resx">
-      <DependentUpon>MachineMaintenanceForm.vb</DependentUpon>
+    <EmbeddedResource Include="EditEquipmentForm.resx">
+      <DependentUpon>EditEquipmentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewEquipmentForm.resx">
+      <DependentUpon>NewEquipmentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewManufacturerForm.resx">
+      <DependentUpon>NewManufacturerForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewServiceCallForm.resx">
       <DependentUpon>NewServiceCallForm.vb</DependentUpon>

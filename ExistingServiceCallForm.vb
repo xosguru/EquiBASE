@@ -113,7 +113,7 @@ Public Class ExistingServiceCallForm
         'Label8
         '
         Me.Label8.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(12, 245)
+        Me.Label8.Location = New System.Drawing.Point(10, 245)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(227, 21)
         Me.Label8.TabIndex = 37
@@ -125,7 +125,7 @@ Public Class ExistingServiceCallForm
         Me.CallNotesTextBox.BackColor = System.Drawing.SystemColors.ControlLight
         Me.CallNotesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CallNotesTextBox.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CallNotesTextBox.Location = New System.Drawing.Point(14, 268)
+        Me.CallNotesTextBox.Location = New System.Drawing.Point(10, 268)
         Me.CallNotesTextBox.MaxLength = 300
         Me.CallNotesTextBox.Multiline = True
         Me.CallNotesTextBox.Name = "CallNotesTextBox"
@@ -234,9 +234,9 @@ Public Class ExistingServiceCallForm
         '
         Me.PictureBox1.Enabled = False
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(11, 20)
+        Me.PictureBox1.Location = New System.Drawing.Point(10, 20)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(155, 39)
+        Me.PictureBox1.Size = New System.Drawing.Size(155, 40)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
@@ -277,7 +277,7 @@ Public Class ExistingServiceCallForm
         Me.SerialNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.SerialNumberTextBox.Enabled = False
         Me.SerialNumberTextBox.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SerialNumberTextBox.Location = New System.Drawing.Point(11, 168)
+        Me.SerialNumberTextBox.Location = New System.Drawing.Point(10, 168)
         Me.SerialNumberTextBox.Name = "SerialNumberTextBox"
         Me.SerialNumberTextBox.Size = New System.Drawing.Size(235, 20)
         Me.SerialNumberTextBox.TabIndex = 31
@@ -286,7 +286,7 @@ Public Class ExistingServiceCallForm
         'SerialNumberLabel
         '
         Me.SerialNumberLabel.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SerialNumberLabel.Location = New System.Drawing.Point(11, 149)
+        Me.SerialNumberLabel.Location = New System.Drawing.Point(10, 149)
         Me.SerialNumberLabel.Name = "SerialNumberLabel"
         Me.SerialNumberLabel.Size = New System.Drawing.Size(235, 19)
         Me.SerialNumberLabel.TabIndex = 28
@@ -296,7 +296,7 @@ Public Class ExistingServiceCallForm
         'SelectMachineLabel
         '
         Me.SelectMachineLabel.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SelectMachineLabel.Location = New System.Drawing.Point(11, 78)
+        Me.SelectMachineLabel.Location = New System.Drawing.Point(10, 78)
         Me.SelectMachineLabel.Name = "SelectMachineLabel"
         Me.SelectMachineLabel.Size = New System.Drawing.Size(224, 21)
         Me.SelectMachineLabel.TabIndex = 22
@@ -326,12 +326,12 @@ Public Class ExistingServiceCallForm
         'MachineNameTextBox
         '
         Me.MachineNameTextBox.Enabled = False
-        Me.MachineNameTextBox.Location = New System.Drawing.Point(11, 98)
+        Me.MachineNameTextBox.Location = New System.Drawing.Point(10, 98)
         Me.MachineNameTextBox.Name = "MachineNameTextBox"
         Me.MachineNameTextBox.Size = New System.Drawing.Size(235, 20)
         Me.MachineNameTextBox.TabIndex = 43
         '
-        'ExistingServiceCall
+        'ExistingServiceCallForm
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.ClientSize = New System.Drawing.Size(1008, 561)
@@ -352,10 +352,10 @@ Public Class ExistingServiceCallForm
         Me.Controls.Add(Me.EmployeeNameLabel)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.CallNotesTextBox)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Name = "ExistingServiceCall"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Name = "ExistingServiceCallForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Review/Edit Exisiting Service Call Data"
+        Me.Text = "View / Update Exisiting Service Call"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -377,7 +377,7 @@ Public Class ExistingServiceCallForm
                                                 tsc.EmployeeID = te.EmployeeID"
     Dim updateServiceCallQuery As String = Nothing
     Dim FormDataSet As DataSet
-    Dim connetionString As String = "data source=DEVSQL;initial catalog=EquiBASE;integrated security=SSPI;persist security info=False;packet size=4096"
+    Dim connectionString As String = "data source=DEVSQL;initial catalog=EquiBASE;integrated security=SSPI;persist security info=False;packet size=4096"
 
 
     Private Sub ServiceCallDropDown_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ServiceCallDropDown.SelectedIndexChanged
@@ -393,7 +393,7 @@ Public Class ExistingServiceCallForm
 
     Private Sub ExistingServiceCall_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormDataSet = New DataSet()
-        connection = New SqlConnection(connetionString)
+        connection = New SqlConnection(connectionString)
         command = New SqlCommand(selectServiceCallsQuery, connection)
         adapter = New SqlDataAdapter(command)
         adapter.Fill(FormDataSet)
@@ -408,6 +408,8 @@ Public Class ExistingServiceCallForm
 
         Dim selectedServiceCallID As String = CType(ServiceCallDropDown.SelectedItem, DataRowView).Row.Item("ServiceCallID").ToString
         UpdateForm(selectedServiceCallID)
+
+        ServiceCallDropDown.Select()
 
     End Sub
     Private Sub UpdateForm(callID As Int32)
@@ -474,7 +476,7 @@ Public Class ExistingServiceCallForm
 
         updateServiceCallQuery = "update tblServiceCalls
                                             set Details = '" & updatedDetails & "' where ServiceCallID = " & selectedServiceCallId
-        connection = New SqlConnection(connetionString)
+        connection = New SqlConnection(connectionString)
         command = New SqlCommand(updateServiceCallQuery, connection)
         connection.Open()
         command.ExecuteNonQuery()
